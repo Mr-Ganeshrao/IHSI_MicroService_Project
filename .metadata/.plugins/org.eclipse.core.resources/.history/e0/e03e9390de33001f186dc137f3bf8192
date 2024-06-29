@@ -1,0 +1,21 @@
+package com.ihis.cw.service;
+
+import com.ihis.cw.binding.Card;
+import com.ihis.cw.binding.LoginForm;
+import com.ihis.cw.binding.Profile;
+
+public interface CaseWorkerService {
+	
+	public String loginCheck(LoginForm loginForm);
+	
+	public String forgotpwd(String email);
+	
+	public Card fetchDashBoardCardData();
+	
+	public Profile fetchProfileInfo(String email);
+	
+	public String updateProfile(Profile profile);
+	
+	
+
+}

@@ -1,0 +1,13 @@
+package com.ihis.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "APP_PALN_DTLS")
+public class AppPlanEntity {
+
+}

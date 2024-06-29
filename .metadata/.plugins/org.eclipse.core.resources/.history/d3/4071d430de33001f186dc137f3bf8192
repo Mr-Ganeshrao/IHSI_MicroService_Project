@@ -1,0 +1,33 @@
+package com.ihis.cw.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ihis.cw.binding.Card;
+import com.ihis.cw.binding.LoginForm;
+import com.ihis.cw.service.CaseWorkerServiceImpl;
+
+@RestController
+public class CaseWorkerController {
+	
+	@Autowired
+	CaseWorkerServiceImpl serviceImpl;
+	
+	@PostMapping("/loginaccount")
+	public String loginAccount(@RequestBody LoginForm loginForm) {
+		return serviceImpl.loginCheck(loginForm);
+	}
+	
+	@PostMapping("/forgotpassword")
+	public String forgotPwd(String email) {
+		return serviceImpl.forgotpwd(email);
+	}
+	
+	@GetMapping("/dashboard")
+	public Card dashboard() {
+		return serviceImpl.fetchDashBoardCardData();
+	}
+}

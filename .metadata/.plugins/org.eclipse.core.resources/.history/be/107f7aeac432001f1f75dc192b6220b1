@@ -1,0 +1,9 @@
+package com.ihis.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ihis.entity.CitizenPlansEntity;
+
+public interface CitizenPlansRepository extends JpaRepository<CitizenPlansEntity, Integer> {
+
+}

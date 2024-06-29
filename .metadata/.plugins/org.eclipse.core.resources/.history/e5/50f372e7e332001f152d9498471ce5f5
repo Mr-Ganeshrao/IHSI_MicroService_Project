@@ -1,0 +1,7 @@
+package com.ihis.service;
+
+public interface AdminService {
+	
+	public String createAccount()
+
+}

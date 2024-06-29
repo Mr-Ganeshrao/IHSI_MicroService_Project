@@ -1,0 +1,51 @@
+package com.ihis.entity;
+
+import java.sql.Date;
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "CITIZEN_CHILD_DTLS")
+public class CitizenChildDtlsEntity {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "CHILD_ID")
+	private Integer childid;
+	
+	@Column(name = "CASE_NUM")
+	private Integer casenum;
+	
+	@Column(name = "CHILD_NAME")
+	private	 String childname;
+	
+	@Column(name = "CHILD_DOB")
+	private Date childdob;
+	
+	@Column(name = "CHIld_ZZN")
+	private Integer childzzn;
+	
+	@Column(name="CREATED_DATE")
+	private LocalDate createddate;
+	
+	@Column(name="UPDATED_DATE")
+	private LocalDate updateddate;
+	
+	@Column(name="CREATED_BY")
+	private String Createdby;
+	
+	@Column(name="UPDATED_BY")
+	private String updatedby;
+	
+	
+	
+
+}

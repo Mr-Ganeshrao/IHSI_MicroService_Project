@@ -1,0 +1,5 @@
+package com.ihis.rest;
+
+public class AdminController {
+
+}

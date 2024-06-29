@@ -1,0 +1,23 @@
+package com.ihis.service;
+
+import java.util.List;
+import java.util.Map;
+
+import com.ihis.binding.Summary;
+
+public interface DataCollectionService {
+	
+	public Map<Integer, String> planName();
+	public String planSelection();
+	
+	public String incomeDtls();
+	
+	public List<String> graduationYear();
+	public String EducationDtls();
+	
+	public String kidsDtls();
+	
+	public Summary showSummary();
+	
+
+}

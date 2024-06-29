@@ -1,0 +1,13 @@
+package com.ihis.service;
+
+import java.util.List;
+
+import com.ihis.binding.AccountForm;
+import com.ihis.entity.CaseWorkersAccounEntity;
+
+public interface AdminService {
+	
+	public String createAccount(AccountForm accountForm);
+	public List<CaseWorkersAccounEntity> viewAccount();
+
+}

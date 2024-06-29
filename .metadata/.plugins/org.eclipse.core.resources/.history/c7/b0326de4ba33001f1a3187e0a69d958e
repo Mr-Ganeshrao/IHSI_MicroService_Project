@@ -1,0 +1,7 @@
+package com.ihis.cw.service;
+
+public class CaseWorkerServiceImpl implements CaseWorkerService {
+	
+	public String loginCheck();
+
+}

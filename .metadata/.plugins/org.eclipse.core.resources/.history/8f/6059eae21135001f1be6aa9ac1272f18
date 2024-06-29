@@ -1,0 +1,8 @@
+package com.ihis.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AppRegServiceImpl implements AppRegService {
+
+}

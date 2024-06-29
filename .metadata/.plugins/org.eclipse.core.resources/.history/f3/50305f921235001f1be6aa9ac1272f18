@@ -1,0 +1,47 @@
+package com.ihis.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "CITIZEN_INCOME_DTLS")
+public class CitizenIncomeDtlsEntity {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "INCOME_ID")
+	private Integer incomeid;
+	
+	@Column(name = "CASE_NUM")
+	private Integer casenum;
+	
+	@Column(name = "SALARY_INCOME")
+	private Integer salaryincome;
+	
+	@Column(name = "RENT_INCOME")
+	private Integer rentincome;
+	
+	@Column(name = "PROPERTY_INCOME")
+	private Integer propertyincome;
+	
+	@Column(name="CREATED_DATE")
+	private LocalDate createddate;
+	
+	@Column(name="UPDATED_DATE")
+	private LocalDate updateddate;
+	
+	@Column(name="CREATED_BY")
+	private String Createdby;
+	
+	@Column(name="UPDATED_BY")
+	private String updatedby;
+
+}

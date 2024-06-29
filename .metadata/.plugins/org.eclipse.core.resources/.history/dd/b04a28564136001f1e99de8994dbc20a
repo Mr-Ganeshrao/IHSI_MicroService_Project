@@ -1,0 +1,85 @@
+package com.ihis.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ihis.binding.Childs;
+import com.ihis.binding.CitizenIncome;
+import com.ihis.binding.Education;
+import com.ihis.binding.PlanSelection;
+import com.ihis.binding.Summary;
+import com.ihis.entity.AppPlanEntity;
+import com.ihis.repository.AppPlanRepository;
+import com.ihis.repository.CitizenChildDtlsRepository;
+import com.ihis.repository.CitizenEduationDtlsRepository;
+import com.ihis.repository.CitizenIncomeDtlsRepository;
+import com.ihis.repository.CitizenPlansRepository;
+import com.ihis.repository.GraduationYearsRepository;
+
+@Service
+public class DataCollectionServiceImpl implements DataCollectionService {
+
+	@Autowired
+	AppPlanRepository appPlanRepository;
+	@Autowired
+	CitizenPlansRepository citizenPlansRepository;
+	@Autowired
+	CitizenIncomeDtlsRepository citizenIncomeDtlsRepository;
+	@Autowired
+	CitizenEduationDtlsRepository citizenEduationDtlsRepository;
+	@Autowired
+	GraduationYearsRepository graduationYearsRepository;
+	@Autowired
+	CitizenChildDtlsRepository childDtlsRepository;
+
+	@Override
+	public Map<Integer, String> planName() {
+		List<AppPlanEntity> findAll = appPlanRepository.findAll();
+		
+		Map<Integer, String> map=new HashMap<>();
+		
+		findAll.forEach(e->map.put(e.getPlanId(), e.getPlansName()));
+		return map;
+	}
+
+	@Override
+	public String planSelection(PlanSelection planSelection) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String incomeDtls(CitizenIncome citizenIncome) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<String> graduationYear() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String EducationDtls(Education education) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String kidsDtls(Childs childs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Summary showSummary(Integer caseNumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

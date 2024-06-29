@@ -1,0 +1,39 @@
+package com.ihis.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "PLAN_CATEGORY_DTLS")
+public class PlanCategoryEntity {
+	
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "CATEGORY_ID")
+	private Integer categoryid;
+	
+	@Column(name = "CATEGORY_NAME")
+	private String categotyname;
+	
+	@Column(name="CREATED_DATE")
+	private LocalDate createddate;
+	
+	@Column(name="UPDATED_DATE")
+	private LocalDate updateddate;
+	
+	@Column(name="CREATED_BY")
+	private String Createdby;
+	
+	@Column(name="UPDATED_BY")
+	private String updatedby;
+
+}

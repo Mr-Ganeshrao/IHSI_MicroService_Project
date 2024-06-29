@@ -1,0 +1,65 @@
+package com.ihis.cw.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ihis.cw.binding.Card;
+import com.ihis.cw.binding.LoginForm;
+import com.ihis.cw.binding.Profile;
+import com.ihis.entity.CaseWorkersAccounEntity;
+import com.ihis.repository.AppPlanRepository;
+import com.ihis.repository.CaseWorkersAcctRepository;
+import com.ihis.repository.CitizenAppRepository;
+import com.ihis.repository.EligibilityDtlsRepository;
+
+@Service
+public class CaseWorkerServiceImpl implements CaseWorkerService {
+	
+	@Autowired
+	private CaseWorkersAcctRepository caseWorkersAcctRepository;
+	
+	@Autowired
+	private AppPlanRepository appPlanRepository;
+	
+	@Autowired
+	private CitizenAppRepository citizenAppRepository;
+	
+	@Autowired
+	private EligibilityDtlsRepository eligibilityDtlsRepository;
+
+	@Override
+	public String loginCheck(LoginForm loginForm) {
+		CaseWorkersAccounEntity accounEntity=caseWorkersAcctRepository.findByEmailAndPazzwrd(loginForm.getEmail(),loginForm.getPazzwrd());
+		
+		if(accounEntity!=null) {return "LOGIN SUCCESSFULLY...!";}
+		return "Wrong Id And Password...!";
+	}
+
+	@Override
+	public String forgotpwd(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Card fetchDashBoardCardData() {
+	Card card=new Card();
+Long appCount	= citizenAppRepository.count();
+		return null;
+	}
+
+	@Override
+	public Profile fetchProfileInfo(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateProfile(Profile profile) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+
+}

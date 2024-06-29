@@ -1,0 +1,5 @@
+package com.ihis.service;
+
+public class AppRegServiceImpl implements AppRegService {
+
+}

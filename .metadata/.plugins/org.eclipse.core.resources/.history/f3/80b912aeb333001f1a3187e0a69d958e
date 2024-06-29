@@ -1,0 +1,38 @@
+package com.ihis.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "GRADUATION_YEAR")
+public class GraduationYearEntiy {
+	
+	@Id
+	@GeneratedValue
+	@Column(name= "YEAR_ID")
+	private Integer year_id;
+	
+	@Column(name = "YEAR")
+	private String year;
+	
+	@Column(name="CREATED_DATE")
+	private LocalDate created_date;
+	
+	@Column(name="UPDATED_DATE")
+	private LocalDate updated_date;
+	
+	@Column(name="CREATED_BY")
+	private String Created_by;
+	
+	@Column(name="UPDATED_BY")
+	private String updated_by;
+
+}

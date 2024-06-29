@@ -1,0 +1,27 @@
+package com.ihis.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.ihis.bindings.CitizenApp;
+
+@Service
+public class AppRegServiceImpl implements AppRegService {
+
+	@Override
+	public String appRegistration(CitizenApp app) {
+		
+		
+		return null;
+	}
+	
+	
+
+	@Override
+	public List<CitizenApp> viewApplication() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

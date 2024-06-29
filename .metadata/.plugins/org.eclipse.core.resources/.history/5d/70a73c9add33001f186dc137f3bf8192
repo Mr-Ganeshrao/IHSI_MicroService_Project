@@ -1,0 +1,8 @@
+package com.ihis.cw.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CaseWorkerController {
+
+}

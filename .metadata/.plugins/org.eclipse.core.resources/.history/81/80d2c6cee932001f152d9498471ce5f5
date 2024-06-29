@@ -1,0 +1,99 @@
+package com.ihis.service;
+
+import java.util.List;
+import java.util.Random;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ihis.binding.AccountForm;
+import com.ihis.binding.PlanForm;
+import com.ihis.entity.AppPlanEntity;
+import com.ihis.entity.CaseWorkersAccounEntity;
+import com.ihis.repository.AppPlanRepository;
+import com.ihis.repository.CaseWorkersAcctRepository;
+
+@Service
+public class AdminServiceImpl implements AdminService {
+	
+	@Autowired
+	AppPlanRepository appPlanRepository;
+	
+	@Autowired
+	CaseWorkersAcctRepository caseWorkersAcctRepository;
+
+	@Override
+	public String createAccount(AccountForm accountForm) {
+		CaseWorkersAccounEntity entity=new CaseWorkersAccounEntity();
+		
+		BeanUtils.copyProperties(accountForm, entity);
+		entity.setActive_status("LOCKED");
+		entity.setPazzword(generateRandompwd());
+	
+		return null;
+	}
+
+	@Override
+	public List<CaseWorkersAccounEntity> viewAccount() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String editAccount(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteAccount(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<String> planCategory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String createPlan(PlanForm planForm) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<AppPlanEntity> viewPlan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String editPlan(Integer id) {  
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deletePlan(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	// Auto password generation method
+		private String generateRandompwd() {
+			int leftLimit = 48; // numeral '0'
+			int rightLimit = 122; // letter 'z'
+			int targetStringLength = 6;
+			Random random = new Random();
+
+			String generatedString = random.ints(leftLimit, rightLimit + 1)
+					.filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97)).limit(targetStringLength)
+					.collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString();
+			return generatedString;
+		}
+
+}
