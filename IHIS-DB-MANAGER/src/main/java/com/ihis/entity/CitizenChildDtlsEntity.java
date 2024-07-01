@@ -28,7 +28,7 @@ public class CitizenChildDtlsEntity {
 	private	 String childName;
 	
 	@Column(name = "CHILD_DOB")
-	private Date childDob;
+	private LocalDate childDob;
 	
 	@Column(name = "CHIld_ZZN")
 	private Integer childzzn;

@@ -1,8 +1,8 @@
 package com.ihis.repository;
 
-import java.util.Map;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
 import org.springframework.stereotype.Repository;
 
 import com.ihis.entity.CitizenPlansEntity;
@@ -11,5 +11,5 @@ import com.ihis.entity.CitizenPlansEntity;
 public interface CitizenPlansRepository extends JpaRepository<CitizenPlansEntity, Integer> {
 	
 	
-
+ public CitizenPlansEntity findByCaseNum(Integer caseNumber);
 }

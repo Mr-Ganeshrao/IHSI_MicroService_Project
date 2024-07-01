@@ -1,5 +1,6 @@
 package com.ihis.entity;
 
+import java.sql.Blob;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -24,10 +25,10 @@ public class CorrespondenceTriggerEntity {
 	private Integer caseNum;
 	
 	@Column(name = "TRG_STATUS")
-	private Character trgStatus;
+	private String trgStatus;
 	
 	@Column(name = "NOTICE")
-	private String notice;
+	private Blob notice;
 	
 	@Column(name="CREATED_DATE")
 	private LocalDate createdDate;

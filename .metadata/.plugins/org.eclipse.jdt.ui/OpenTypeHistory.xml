@@ -2,4 +2,5 @@
 <typeInfoHistroy>
     <typeInfo handle="=IHIS-DB-MANAGER/C:\/Users\/Ganeshrao\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.0\/spring-data-jpa-2.7.0.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.0=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1719293033915"/>
     <typeInfo handle="=IHIS-AR-Api/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ihis.service{AppRegService.java[AppRegService" modifiers="513" timestamp="1719553480183"/>
+    <typeInfo handle="=IHIS-ED-Api/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ihis.service{EligiblityDeterminationService.java[EligiblityDeterminationService" modifiers="513" timestamp="1719820406668"/>
 </typeInfoHistroy>

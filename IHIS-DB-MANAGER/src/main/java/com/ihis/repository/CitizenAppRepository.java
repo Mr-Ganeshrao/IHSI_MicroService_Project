@@ -8,4 +8,6 @@ import com.ihis.entity.CitizenAppEntity;
 @Repository
 public interface CitizenAppRepository extends JpaRepository<CitizenAppEntity, Integer> {
 
+	
+	public CitizenAppEntity findByCaseNum(Integer caseNumber);
 }

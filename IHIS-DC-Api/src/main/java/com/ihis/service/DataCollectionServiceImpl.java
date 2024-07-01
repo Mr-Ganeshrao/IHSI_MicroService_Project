@@ -33,14 +33,19 @@ public class DataCollectionServiceImpl implements DataCollectionService {
 
 	@Autowired
 	AppPlanRepository appPlanRepository;
+	
 	@Autowired
 	CitizenPlansRepository citizenPlansRepository;
+	
 	@Autowired
 	CitizenIncomeDtlsRepository citizenIncomeDtlsRepository;
+	
 	@Autowired
 	CitizenEduationDtlsRepository citizenEduationDtlsRepository;
+	
 	@Autowired
 	GraduationYearsRepository graduationYearsRepository;
+	
 	@Autowired
 	CitizenChildDtlsRepository CitizenChildDtlsRepository;
 

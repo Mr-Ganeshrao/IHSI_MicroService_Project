@@ -38,7 +38,7 @@ public class CitizenAppEntity {
 	private String gender;
 	
 	@Column(name = "DOB")
-	private Date dob;
+	private LocalDate dob;
 	
 	@Column(name = "zzN")
 	private Integer zzn;
