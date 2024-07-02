@@ -1,5 +1,0 @@
-package com.ihis.repository;
-
-public interface CitizenChildDtlsRepository {
-
-}

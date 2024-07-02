@@ -34,7 +34,6 @@
 			<groupId>com.ihis</groupId>
 			<artifactId>IHIS-DB-MANAGER</artifactId>
 			<version>1.0.RELEASE</version>
-
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -1,7 +1,0 @@
-package com.ihis.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface CitizenGraduationDtlsRepository extends JpaRepository<T, ID> {
-
-}

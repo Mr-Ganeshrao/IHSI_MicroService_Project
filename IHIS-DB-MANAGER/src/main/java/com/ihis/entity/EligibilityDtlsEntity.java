@@ -22,7 +22,7 @@ public class EligibilityDtlsEntity {
 	private Integer eligid;
 	
 	@Column(name = "CASE_NUM")
-	private Integer casenum;
+	private Integer caseNum;
 	
 	@Column(name = "PLAN_NAME")
 	private String planname;

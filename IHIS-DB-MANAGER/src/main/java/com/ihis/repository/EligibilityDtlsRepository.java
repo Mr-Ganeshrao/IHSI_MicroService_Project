@@ -8,4 +8,6 @@ import com.ihis.entity.EligibilityDtlsEntity;
 @Repository
 public interface EligibilityDtlsRepository extends JpaRepository<EligibilityDtlsEntity, Integer> {
 
+	
+	public EligibilityDtlsEntity findByCaseNum(Integer caseNum);
 }
